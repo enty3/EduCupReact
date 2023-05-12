@@ -4,21 +4,7 @@ export function EduCup() {
     return (
         <>
 
-            <header>
-                <div className="logo">
-                    <a href="EduCupV2.html"><img
-                        src="educup-low-resolution-logo-color-on-transparent-background%20(2).png"
-                        alt="EduCup 2023"/></a>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="uvod.html">Úvod</a></li>
-                        <li><a href="program.html">Program</a></li>
-                        <li><a href="prihlaseni.html">Přihlášení</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </nav>
-            </header>
+
 
             <main>
                 <section className="intro">
@@ -97,20 +83,7 @@ export function EduCup() {
                 {/* Add a placeholder for the Twitch embed */}
 
             </main>
-            <footer>
-                <p>&copy; EduCup 2023</p>
-                <ul>
-                    <li>
-                        <a href="#">O nás</a>
-                    </li>
-                    <li>
-                        <a href="#">Podmínky účasti</a>
-                    </li>
-                    <li>
-                        <a href="#">Ochrana osobních údajů</a>
-                    </li>
-                </ul>
-            </footer>
+
         </>
 
     )
