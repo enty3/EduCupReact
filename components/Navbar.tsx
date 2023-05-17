@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 
 
 export function  Navbar(){
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    const toggleTheme = () => {
+        setIsDarkTheme((prevTheme) => !prevTheme);
+        document.body.classList.toggle("dark-theme");
+    };
+
 return (
-    <header>
+    <header className={isDarkTheme ? "dark-theme" : ""}>
         <div className="logo">
             <a href="EduCupV2.html"><img src="educup-low-resolution-logo-color-on-transparent-background (2).png" alt="EduCup 2023" /></a>
         </div>

@@ -1,11 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 
 
-export function  Footer(){
+export function Footer() {
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    const toggleTheme = () => {
+        setIsDarkTheme((prevTheme) => !prevTheme);
+        document.body.classList.toggle("dark-theme");
+    };
+
+    
     return (
-        <footer>
-            <p>&copy; EduCup 2023</p>
-            <img src="treteralogo.png" alt="adamtretera.cz" />
+        <footer className={isDarkTheme ? "dark-theme" : ""}>
+            <div className="sponsor">
+                <p>Sponsored by:</p>
+                <img src="treteralogo.png" alt="adamtretera.cz" />
+            </div>
             <ul>
                 <li>
                     <a href="#">O nás</a>
@@ -17,6 +27,7 @@ export function  Footer(){
                     <a href="#">Ochrana osobních údajů</a>
                 </li>
             </ul>
+            <p>&copy; EduCup 2023</p>
         </footer>
-    )
+    );
 }

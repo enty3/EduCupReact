@@ -1,12 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
+
 
 export function EduCup() {
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    const toggleTheme = () => {
+        setIsDarkTheme((prevTheme) => !prevTheme);
+        document.body.classList.toggle("dark-theme");
+    };
+
+
     return (
         <>
 
-
-
-            <main>
+            <body className={isDarkTheme ? "dark-theme" : ""}>
+            <button className="round-button" onClick={toggleTheme}>
+                {isDarkTheme ? <i className="bi bi-sun"></i> : <i className="bi bi-moon"></i>}
+            </button>
+            <main className={isDarkTheme ? "dark-theme" : ""}>
                 <section className="intro">
                     <h2 style={{paddingTop: '25px'}}>Vítejte na EduCup 2023!</h2>
                     <p>Těšíme se, že se budeme moci setkat na našem školním e-sportovém turnaji. Akce se uskuteční v
@@ -68,7 +79,7 @@ export function EduCup() {
                             <option value="csgo">Counter-Strike: Global Offensive</option>
                         </select>
                         <label htmlFor="team-members">Seznam členů týmu (max. 5):</label>
-                        <textarea id="team-members" name="team-members" rows="5" required></textarea>
+                        <textarea id="team-members" name="team-members" required></textarea>
                         <input type="submit" value="Odeslat přihlášku" onClick={(e) => {
                             e.preventDefault()
                         }}/>
@@ -83,7 +94,7 @@ export function EduCup() {
                 {/* Add a placeholder for the Twitch embed */}
 
             </main>
-
+            </body>
         </>
 
     )
