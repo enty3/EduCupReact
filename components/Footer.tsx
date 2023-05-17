@@ -5,6 +5,7 @@ export function  Footer(){
     return (
         <footer>
             <p>&copy; EduCup 2023</p>
+            <img src="treteralogo.png" alt="adamtretera.cz" />
             <ul>
                 <li>
                     <a href="#">O nás</a>

@@ -1,6 +1,6 @@
 import {Navbar} from "../../components/Navbar";
 import {Footer} from "../../components/Footer";
-import {Program} from "../../components/Program";
+import {Program} from "../../components/MainPages/Program";
 
 export default function program() {
     return (

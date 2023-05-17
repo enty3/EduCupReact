@@ -4,7 +4,7 @@ export function Program() {
     return (
         <>
             <main>
-                <section className="schedule">
+                <section className="schedule" style={{ padding: "5px" }}>
                     <h2>Program</h2>
                     <p>Nabitý program zahrnuje registraci a rozlosování týmů, slavnostní zahájení turnaje, přestávku na oběd a samozřejmě hlavní součást - samotný turnaj, který nabídne skvělé zápasy plné nečekaných obratů a výborných her.</p>
                     <p>Výherci turnaje budou slavnostně vyhlášeni v závěru akce a odnesou si nejen výborné ceny, ale také pocit, že jsou nejlepšími hráči našeho turnaje.</p>

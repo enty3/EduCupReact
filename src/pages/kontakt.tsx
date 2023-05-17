@@ -1,5 +1,5 @@
 import {Navbar} from "../../components/Navbar";
-import {Kontakt} from "../../components/Kontakt";
+import {Kontakt} from "../../components/MainPages/Kontakt";
 import {Footer} from "../../components/Footer";
 
 export default function prihlaseni() {

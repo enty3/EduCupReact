@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import {EduCup} from "../../components/Main";
+import {EduCup} from "../../components/MainPages/Main";
 import {Navbar} from "../../components/Navbar";
 import {Footer} from "../../components/Footer";
 
