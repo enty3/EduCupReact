@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 
 export function  Navbar(){
@@ -9,10 +10,10 @@ return (
         </div>
         <nav>
             <ul>
-                <li><a href="uvod.html">Úvod</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="prihlaseni.html">Přihlášení</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><Link href="/">Úvod</Link></li>
+                <li><Link href="/program">Program</Link></li>
+                <li><Link href="/prihlaseni">Prihlaseni</Link></li>
+                <li><Link href="/kontakt">Kontakt</Link></li>
             </ul>
         </nav>
     </header>
