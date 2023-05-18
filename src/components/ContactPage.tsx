@@ -1,12 +1,12 @@
-import {ThemeToggleButton} from "../buttons/ThemeButton";
+import {ThemeButton} from "./ThemeButton";
 
 
-export function Kontakt(){
+export function ContactPage(){
     return(
         <>
             <body>
             <main>
-                <ThemeToggleButton></ThemeToggleButton>
+                <ThemeButton></ThemeButton>
                 <section style={{ padding: "5px" }}>
                     <h1>Kontakt</h1>
                     <p>
