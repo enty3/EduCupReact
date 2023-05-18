@@ -1,13 +1,9 @@
-import {Navbar} from "../../components/Navbar";
-import {Kontakt} from "../../components/MainPages/Kontakt";
-import {Footer} from "../../components/Footer";
+import { ContactPage, Layout } from '@/components'
 
-export default function prihlaseni() {
-    return (
-        <>
-            <Navbar></Navbar>
-            <Kontakt></Kontakt>
-            <Footer></Footer>
-        </>
-    )
+export default function Contact() {
+  return (
+    <Layout>
+      <ContactPage />
+    </Layout>
+  )
 }
