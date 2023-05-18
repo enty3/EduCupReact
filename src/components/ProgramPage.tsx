@@ -1,12 +1,12 @@
 import React from 'react';
-import {ThemeToggleButton} from "../buttons/ThemeButton";
+import {ThemeButton} from "./ThemeButton";
 
-export function Program() {
+export function ProgramPage() {
     return (
         <>
             <body>
             <main>
-                <ThemeToggleButton></ThemeToggleButton>
+                <ThemeButton></ThemeButton>
                 <section className="schedule" style={{ padding: "5px" }}>
                     <h2>Program</h2>
                     <p>Nabitý program zahrnuje registraci a rozlosování týmů, slavnostní zahájení turnaje, přestávku na oběd a samozřejmě hlavní součást - samotný turnaj, který nabídne skvělé zápasy plné nečekaných obratů a výborných her.</p>

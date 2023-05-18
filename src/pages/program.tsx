@@ -1,13 +1,9 @@
-import {Navbar} from "../../components/Navbar";
-import {Footer} from "../../components/Footer";
-import {Program} from "../../components/MainPages/Program";
+import { Layout, ProgramPage } from '@/components'
 
-export default function program() {
-    return (
-        <>
-            <Navbar></Navbar>
-            <Program></Program>
-            <Footer></Footer>
-        </>
-    )
+export default function Program() {
+  return (
+    <Layout>
+      <ProgramPage />
+    </Layout>
+  )
 }

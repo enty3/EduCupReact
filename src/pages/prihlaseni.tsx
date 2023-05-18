@@ -1,13 +1,9 @@
-import {Navbar} from "../../components/Navbar";
-import {Prihlaseni} from "../../components/MainPages/Prihlaseni";
-import {Footer} from "../../components/Footer";
+import { Layout, LoginPage } from '@/components'
 
-export default function prihlaseni() {
-    return (
-        <>
-            <Navbar></Navbar>
-           <Prihlaseni></Prihlaseni>
-            <Footer></Footer>
-        </>
-    )
+export default function Login() {
+  return (
+    <Layout>
+      <LoginPage />
+    </Layout>
+  )
 }
