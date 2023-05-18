@@ -13,7 +13,7 @@ export function  Navbar(){
 return (
     <header className={isDarkTheme ? "dark-theme" : ""}>
         <div className="logo">
-            <a href="EduCupV2.html"><img src="educup-low-resolution-logo-color-on-transparent-background (2).png" alt="EduCup 2023" /></a>
+            <Link href="/"><img src="educup-low-resolution-logo-color-on-transparent-background (2).png" alt="EduCup 2023" /></Link>
         </div>
         <nav>
             <ul>

@@ -1,8 +1,11 @@
+import {ThemeToggleButton} from "../buttons/ThemeButton";
 
 export function Prihlaseni() {
     return(
         <>
+            <body>
             <main>
+                <ThemeToggleButton></ThemeToggleButton>
                 <section style={{ padding: "5px" }}>
                     <h1>Přihlášení</h1>
                     <p>
@@ -28,7 +31,7 @@ export function Prihlaseni() {
                     </p>
                 </section>
             </main>
-
+            </body>
 
         </>
     )

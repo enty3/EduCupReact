@@ -11,8 +11,8 @@ export function ThemeToggleButton() {
     };
 
     return (
-        <button onClick={toggleTheme}>
-            {isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"}
+        <button className="round-button" onClick={toggleTheme}>
+            {isDarkTheme ? <i className="bi bi-sun"></i> : <i className="bi bi-moon"></i>}
         </button>
     );
 }

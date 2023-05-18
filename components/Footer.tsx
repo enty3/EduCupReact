@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Link from "next/link";
 
 
 export function Footer() {
@@ -18,13 +19,13 @@ export function Footer() {
             </div>
             <ul>
                 <li>
-                    <a href="#">O nás</a>
+                    <Link href="#">O nás</Link>
                 </li>
                 <li>
-                    <a href="#">Podmínky účasti</a>
+                    <Link href="#">Podmínky účasti</Link>
                 </li>
                 <li>
-                    <a href="#">Ochrana osobních údajů</a>
+                    <Link href="#">Ochrana osobních údajů</Link>
                 </li>
             </ul>
             <p>&copy; EduCup 2023</p>

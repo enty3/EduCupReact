@@ -1,9 +1,12 @@
+import {ThemeToggleButton} from "../buttons/ThemeButton";
 
 
 export function Kontakt(){
     return(
         <>
+            <body>
             <main>
+                <ThemeToggleButton></ThemeToggleButton>
                 <section style={{ padding: "5px" }}>
                     <h1>Kontakt</h1>
                     <p>
@@ -27,7 +30,7 @@ export function Kontakt(){
                     </p>
                 </section>
             </main>
-
+            </body>
 
         </>
     )

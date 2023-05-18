@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {ThemeToggleButton} from "../buttons/ThemeButton";
 
 
 export function EduCup() {
@@ -14,9 +15,7 @@ export function EduCup() {
         <>
 
             <body className={isDarkTheme ? "dark-theme" : ""}>
-            <button className="round-button" onClick={toggleTheme}>
-                {isDarkTheme ? <i className="bi bi-sun"></i> : <i className="bi bi-moon"></i>}
-            </button>
+            <ThemeToggleButton></ThemeToggleButton>
             <main className={isDarkTheme ? "dark-theme" : ""}>
                 <section className="intro">
                     <h2 style={{paddingTop: '25px'}}>Vítejte na EduCup 2023!</h2>
@@ -73,14 +72,14 @@ export function EduCup() {
                     <p>Pokud chcete s týmem soutěžit v EduCup 2023, vyplňte prosím přihlášku:</p>
                     <form action="https://formsubmit.co/educupreg@gmail.com" method="post">
                         <label htmlFor="team-name">Jméno týmu:</label>
-                        <input type="text" id="team-name" name="team-name" required/>
+                        <input className={isDarkTheme ? "dark-theme" : ""} type="text" id="team-name" name="team-name" required/>
                         <label htmlFor="game-select">Vyberte hru:</label>
-                        <select id="game-select" name="game-select" required>
+                        <select className={isDarkTheme ? "dark-theme" : ""} id="game-select" name="game-select" required>
                             <option value="csgo">Counter-Strike: Global Offensive</option>
                         </select>
                         <label htmlFor="team-members">Seznam členů týmu (max. 5):</label>
-                        <textarea id="team-members" name="team-members" required></textarea>
-                        <input type="submit" value="Odeslat přihlášku" onClick={(e) => {
+                        <textarea className={isDarkTheme ? "dark-theme" : ""} id="team-members" name="team-members" required></textarea>
+                        <input className={isDarkTheme ? "dark-theme" : ""} type="submit" value="Odeslat přihlášku" onClick={(e) => {
                             e.preventDefault()
                         }}/>
                     </form>
