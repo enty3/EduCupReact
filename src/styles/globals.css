@@ -212,40 +212,7 @@ main {
 }
 
 /* Styly pro patičku */
-footer {
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 0px ;
 
-}
-
-.sponsor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.sponsor p {
-    margin: 0;
-    font-size: 14px;
-    margin-right: 10px;
-}
-
-footer ul {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-
-}
-
-footer li {
-    margin: 0 10px;
-    list-style: none;
-
-}
 
 
 @media screen and (max-width: 768px) {

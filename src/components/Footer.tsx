@@ -12,25 +12,17 @@ export function Footer() {
 */
 
   return (
-    <footer className={isDarkTheme ? 'dark-theme' : ''}>
-      <div className="sponsor">
-        <p>Sponsored by:</p>
-        {/*
-        <img src="treteralogo.png" alt="adamtretera.cz" />
-*/}
+    <footer className="bg-gray-100 p-4 text-center shadow-md mt-0">
+      <div className="flex items-center justify-center mb-2">
+        <p className="mr-2 text-sm">Sponsored by:</p>
+        {/* <img src="treteralogo.png" alt="adamtretera.cz" /> */}
       </div>
-      <ul>
-        <li>
-          <Link href="#">O nás</Link>
-        </li>
-        <li>
-          <Link href="#">Podmínky účasti</Link>
-        </li>
-        <li>
-          <Link href="#">Ochrana osobních údajů</Link>
-        </li>
+      <ul className="flex justify-center mt-2">
+        <li className="mx-2">O nás</li>
+        <li className="mx-2">Podmínky účasti</li>
+        <li className="mx-2">Ochrana osobních údajů</li>
       </ul>
-      <p>&copy; EduCup 2023</p>
+      <p className="text-sm">&copy; EduCup 2023</p>
     </footer>
   )
 }

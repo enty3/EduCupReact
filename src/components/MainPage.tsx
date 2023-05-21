@@ -11,9 +11,6 @@ export function MainPage() {
 
   return (
     <>
-      {/*
-            <ThemeButton></ThemeButton>
-*/}
       <section className="intro">
         <h2>Vítejte na EduCup 2023!</h2>
         <p>
@@ -69,50 +66,46 @@ export function MainPage() {
       </section>
       <br />
       <br />
-      {/*          <section className="register">
-            <h2>Přihlášení</h2>
-            <p>
-              Pokud chcete s týmem soutěžit v EduCup 2023, vyplňte prosím
-              přihlášku:
-            </p>
-            <form
-              action="https://formsubmit.co/educupreg@gmail.com"
-              method="post"
-            >
-              <label htmlFor="team-name">Jméno týmu:</label>
-              <input
-                className={isDarkTheme ? 'dark-theme' : ''}
-                type="text"
-                id="team-name"
-                name="team-name"
-                required
-              />
-              <label htmlFor="game-select">Vyberte hru:</label>
-              <select
-                className={isDarkTheme ? 'dark-theme' : ''}
-                id="game-select"
-                name="game-select"
-                required
-              >
-                <option value="csgo">Counter-Strike: Global Offensive</option>
-              </select>
-              <label htmlFor="team-members">Seznam členů týmu (max. 5):</label>
-              <textarea
-                className={isDarkTheme ? 'dark-theme' : ''}
-                id="team-members"
-                name="team-members"
-                required
-              ></textarea>
-              <input
-                className={isDarkTheme ? 'dark-theme' : ''}
-                type="submit"
-                value="Odeslat přihlášku"
-                onClick={(e) => {
-                  e.preventDefault()
-                }}
-              />
-            </form>
-          </section>*/}
+      <section className="register">
+        <h2>Přihlášení</h2>
+        <p>
+          Pokud chcete s týmem soutěžit v EduCup 2023, vyplňte prosím přihlášku:
+        </p>
+        <form action="https://formsubmit.co/educupreg@gmail.com" method="post">
+          <label htmlFor="team-name">Jméno týmu:</label>
+          <input
+            className={isDarkTheme ? 'dark-theme' : ''}
+            type="text"
+            id="team-name"
+            name="team-name"
+            required
+          />
+          <label htmlFor="game-select">Vyberte hru:</label>
+          <select
+            className={isDarkTheme ? 'dark-theme' : ''}
+            id="game-select"
+            name="game-select"
+            required
+          >
+            <option value="csgo">Counter-Strike: Global Offensive</option>
+          </select>
+          <label htmlFor="team-members">Seznam členů týmu (max. 5):</label>
+          <textarea
+            className={isDarkTheme ? 'dark-theme' : ''}
+            id="team-members"
+            name="team-members"
+            required
+          ></textarea>
+          <input
+            className={isDarkTheme ? 'dark-theme' : ''}
+            type="submit"
+            value="Odeslat přihlášku"
+            onClick={(e) => {
+              e.preventDefault()
+            }}
+          />
+        </form>
+      </section>
 
       <h2>Živý stream</h2>
       <p>Sledujte naši akci v přímém přenosu na Twitchi:</p>
