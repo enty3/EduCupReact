@@ -1,55 +1,105 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth';
-import { useState } from 'react';
+import {getAuth, signInWithPopup, GoogleAuthProvider, signOut} from 'firebase/auth';
+import {useState} from 'react';
+import {app} from "@/firebase";
+import { ChevronDownIcon } from "@heroicons/react/solid";
 
 export function Navbar() {
-  const [user, setUser] = useState<string | null>(null);
+    const [user, setUser] = useState<string | null>(null);
+    const [userpic, setUserpic] = useState<string | null>(null);
+    const [showDropdown, setShowDropdown] = useState(false);
 
-  const signIn = async () => {
-    const authInstance = getAuth();
-    const provider = new GoogleAuthProvider();
-    const res = await signInWithPopup(authInstance, provider);
-    setUser(res.user.displayName);
-  };
+    const signIn = async () => {
+        const authInstance = getAuth(app);
+        const provider = new GoogleAuthProvider();
+        const res = await signInWithPopup(authInstance, provider);
+        setUser(res.user.displayName);
+        setUserpic(res.user.photoURL);
+    };
 
-  const handleSignOut = () => {
-    const authInstance = getAuth();
-    signOut(authInstance);
-    setUser(null);
-  };
+    const handleSignOut = () => {
+        const authInstance = getAuth();
+        signOut(authInstance);
+        setUser(null);
+    };
 
-  return (
-      <header className='bg-white dark:bg-neutral-700 flex items-center justify-between p-3 shadow'>
-        <Link href='/'>
-          <div className='relative w-6 h-6'>
-            <Image src='/images/adamos.jpg' alt='Educup Logo' width={24} height={24} />
-          </div>
-        </Link>
+    const handleDropdownToggle = () => {
+        setShowDropdown(!showDropdown);
 
-        <nav>
-          <ul>
-            <li>
-              <Link href='/'>Úvod</Link>
-            </li>
-            <li>
-              <Link href='/program'>Program</Link>
-            </li>
-            <li>
-              <Link href='/prihlaseni'>Prihlaseni</Link>
-            </li>
-            <li>
-              <Link href='/kontakt'>Kontakt</Link>
-            </li>
-            <li>
-              {user ? (
-                  <button onClick={handleSignOut}>Sign Out</button>
-              ) : (
-                  <button onClick={signIn}>Sign In</button>
-              )}
-            </li>
-          </ul>
-        </nav>
-      </header>
-  );
+    };
+
+    return (
+        <header className='bg-white dark:bg-neutral-700 flex items-center justify-between p-3 shadow'>
+            <Link href='/'>
+                <div className='relative w-fit'>
+                    <Image src='/images/educup-logo.png' alt='Educup Logo' width={150} height={150} />
+
+                </div>
+
+            </Link>
+
+            <nav>
+                <ul>
+                    <li>
+                        <Link href='/'>Úvod</Link>
+                    </li>
+                    <li>
+                        <Link href='/program'>Program</Link>
+                    </li>
+                    <li>
+                        <Link href='/prihlaseni'>Prihlaseni</Link>
+                    </li>
+                    <li>
+                        <Link href='/kontakt'>Kontakt</Link>
+                    </li>
+
+
+                    <li>
+                        {user ? (
+                            <div>
+                                {user && userpic ? (
+                                    <div className="relative">
+                                        <button
+                                            onClick={handleDropdownToggle}
+                                            className="flex items-center space-x-2 text-white"
+                                        >
+                                    <h3>{user}<Image src={userpic} alt={"UserProfilePicture"} width={30} height={30}/></h3>
+                                        </button>
+                                        {showDropdown && (
+                                            <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded shadow-lg">
+                                                <a
+                                                    href="#"
+                                                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                                                >
+                                                    <button onClick={handleSignOut}>SignOut</button>
+                                                </a>
+                                                <a
+                                                    href="#"
+                                                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                                                >
+                                                    Option 2
+                                                </a>
+                                                <a
+                                                    href="#"
+                                                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                                                >
+                                                    Option 3
+                                                </a>
+                                            </div>
+                                        )}
+                                    </div>
+                                ) : (
+                                    <h1></h1>
+                                )}
+
+                            </div>
+                        ) : (
+                            <button onClick={signIn}>Sign In</button>
+                        )}
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    );
 }

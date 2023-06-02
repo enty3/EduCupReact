@@ -15,43 +15,6 @@ body {
 
 }
 
-.dark-theme input{
-    background-color: #202020;
-    color: white;
-    border: 10px solid white;
-}
-
-.dark-theme select {
-    background-color: #202020;
-    color: white;
-}
-
-.dark-theme textarea{
-    background-color: #202020;
-    color: white;
-}
-
-.dark-theme body{
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 0;
-    padding: 0;
-    font-size: 16px;
-    color: white;
-    background-color:#181818 ;
-}
-
-
-.dark-theme p{
-    background-color: #202020;
-}
-
-
-
-.dark-theme footer{
-    color: white;
-    background-color: #202020;
-}
-
 
 
 
