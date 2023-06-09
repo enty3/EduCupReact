@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+
 import {getAuth, signInWithPopup, GoogleAuthProvider, signOut} from 'firebase/auth';
 import {useState} from 'react';
 import {app} from "@/firebase";
@@ -36,7 +36,7 @@ export function Navbar() {
         <header className='bg-white dark:bg-neutral-700 flex items-center justify-between p-3 shadow'>
             <Link href='/'>
                 <div className='relative w-fit'>
-                    <Image src='/images/educup-logo.png' alt='Educup Logo' width={150} height={150} />
+                    <img src='/images/educup-logo.png' alt='Educup Logo' width={150} height={150} />
 
                 </div>
 
@@ -67,7 +67,7 @@ export function Navbar() {
                                             onClick={handleDropdownToggle}
                                             className="flex items-center space-x-2 text-white"
                                         >
-                                    <h3>{user.name}<Image src={user.userPic} alt={"UserProfilePicture"} width={30} height={30}/></h3>
+                                    <h3>{user.name}<img src={user.userPic} alt={"UserProfilePicture"} width={30} height={30}/></h3>
                                         </button>
                                         {showDropdown && (
                                             <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded shadow-lg">
