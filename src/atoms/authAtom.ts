@@ -3,7 +3,7 @@ import {atom} from "jotai";
 
 export type User = {
     name: string | null;
-    email: string | null;
+    email: string | null ;
     token: string | null;
     userPic: string | null
 }
@@ -13,4 +13,4 @@ const defaultValues = {
     token: null,
     userPic: null
 }
-export const authAtom = atom<User>(defaultValues)
+export const authAtom = atom<User | null >(null)

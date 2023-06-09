@@ -59,9 +59,9 @@ export function Navbar() {
 
 
                     <li>
-                        {user.name ? (
+                        {user?.name ? (
                             <div>
-                                {user.name && user.userPic ? (
+                                {user?.name && user.userPic ? (
                                     <div className="relative">
                                         <button
                                             onClick={handleDropdownToggle}
