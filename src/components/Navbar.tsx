@@ -3,19 +3,22 @@ import Image from 'next/image';
 import {getAuth, signInWithPopup, GoogleAuthProvider, signOut} from 'firebase/auth';
 import {useState} from 'react';
 import {app} from "@/firebase";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import {useAtom} from "jotai";
+import {authAtom} from "@/atoms/authAtom";
 
 export function Navbar() {
-    const [user, setUser] = useState<string | null>(null);
-    const [userpic, setUserpic] = useState<string | null>(null);
     const [showDropdown, setShowDropdown] = useState(false);
+    const [user, setUser] = useAtom(authAtom);
 
     const signIn = async () => {
         const authInstance = getAuth(app);
         const provider = new GoogleAuthProvider();
-        const res = await signInWithPopup(authInstance, provider);
-        setUser(res.user.displayName);
-        setUserpic(res.user.photoURL);
+        const res = await signInWithPopup(authInstance, provider).then((user)=> setUser({
+            name: user.user.displayName,
+            email: user.user.email,
+            token: user.user.uid,
+            userPic: user.user.photoURL
+        }) );
     };
 
     const handleSignOut = () => {
@@ -56,15 +59,15 @@ export function Navbar() {
 
 
                     <li>
-                        {user ? (
+                        {user.name ? (
                             <div>
-                                {user && userpic ? (
+                                {user.name && user.userPic ? (
                                     <div className="relative">
                                         <button
                                             onClick={handleDropdownToggle}
                                             className="flex items-center space-x-2 text-white"
                                         >
-                                    <h3>{user}<Image src={userpic} alt={"UserProfilePicture"} width={30} height={30}/></h3>
+                                    <h3>{user.name}<Image src={user.userPic} alt={"UserProfilePicture"} width={30} height={30}/></h3>
                                         </button>
                                         {showDropdown && (
                                             <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded shadow-lg">

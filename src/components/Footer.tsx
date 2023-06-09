@@ -12,7 +12,7 @@ export function Footer() {
 */
 
   return (
-    <footer className="bg-gray-100 p-4 text-center shadow-md mt-0">
+    <footer className="bg-white dark:bg-neutral-700 p-4 text-center shadow-md mt-0">
       <div className="flex items-center justify-center mb-2">
         <p className="mr-2 text-sm">Sponsored by:</p>
         {/* <img src="treteralogo.png" alt="adamtretera.cz" /> */}
