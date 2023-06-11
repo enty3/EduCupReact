@@ -115,7 +115,6 @@ export function MainPage() {
             required
           ></textarea>
           <input
-              className={isDarkTheme ? 'dark-theme' : ''}
               type="submit"
               value="Odeslat přihlášku"
               onClick={(e) => {
