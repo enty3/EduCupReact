@@ -117,9 +117,6 @@ export function MainPage() {
           <input
               type="submit"
               value="Odeslat přihlášku"
-              onClick={(e) => {
-                e.preventDefault()
-              }}
           />
 
 
