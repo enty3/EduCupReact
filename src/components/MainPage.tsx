@@ -15,6 +15,17 @@ export function MainPage() {
   const [user, setUser] = useAtom(authAtom)
   const [isDarkTheme, setIsDarkTheme] = useState(false)
 
+  const signIn = async () => {
+    const authInstance = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    const res = await signInWithPopup(authInstance, provider).then((user)=> setUser({
+      name: user.user.displayName,
+      email: user.user.email,
+      token: user.user.uid,
+      userPic: user.user.photoURL
+    }) );
+  };
+
   const handleSignOut = () => {
     const authInstance = getAuth()
     signOut(authInstance)
@@ -137,7 +148,7 @@ export function MainPage() {
                     value="Odeslat přihlášku"
                 />
             ) : (
-<h2>Přihlaš se pro odeslání!</h2>
+                <button onClick={signIn}>Přihlaš se pro odeslání!</button>
             )}
           </div>
 
