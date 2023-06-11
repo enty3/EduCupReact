@@ -89,16 +89,22 @@ export function MainPage() {
           Pokud chcete s týmem soutěžit v EduCup 2023, vyplňte prosím přihlášku:
         </p>
         <form action="https://formsubmit.co/c0c2401d00377313d34b4f00d67c8813" method="post">
-          <label>Přihlášen jako:</label>
-          <input
-              className={isDarkTheme ? 'dark-theme' : ''}
-              type="text"
-              readOnly
-              value={user?.email ?? ''}
-              id="user-email"
-              name="user-email"
-              required
-          />
+          <div>
+            {user?.email ? (
+                <input
+                    className={isDarkTheme ? 'dark-theme' : ''}
+                    type="text"
+                    readOnly
+                    value={user?.email ?? ''}
+                    id="user-email"
+                    name="user-email"
+                    required
+                />
+            ) : (
+                <h6></h6>
+            )}
+          </div>
+
 
           <label htmlFor="team-name">Jméno týmu:</label>
           <input
