@@ -26,7 +26,9 @@ export function MainPage() {
     }) );
   };
 
-  function validateEmail(event) {
+
+
+  function validateEmail(event: any | null) {
     const userEmail = event.target.querySelector('#user-email').value;
     const isValidEmail = userEmail.endsWith('@educanet.cz');
 
