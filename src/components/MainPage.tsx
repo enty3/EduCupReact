@@ -26,6 +26,16 @@ export function MainPage() {
     }) );
   };
 
+  function validateEmail(event) {
+    const userEmail = event.target.querySelector('#user-email').value;
+    const isValidEmail = userEmail.endsWith('@educanet.cz');
+
+    if (!isValidEmail) {
+      event.preventDefault(); // Zabraňuje odeslání formuláře
+      alert('Pouze uživatelé s emailovou adresou @educanet.cz mohou odeslat formulář.');
+    }
+  }
+
   const handleSignOut = () => {
     const authInstance = getAuth()
     signOut(authInstance)
@@ -99,7 +109,9 @@ export function MainPage() {
         <p>
           Pokud chcete s týmem soutěžit v EduCup 2023, vyplňte prosím přihlášku:
         </p>
-        <form action="https://formsubmit.co/c0c2401d00377313d34b4f00d67c8813" method="post">
+        <form  action="https://formsubmit.co/c0c2401d00377313d34b4f00d67c8813"
+               method="post"
+               onSubmit={validateEmail}>
           <div>
             {user?.email ? (
                 <input
