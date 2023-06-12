@@ -172,8 +172,14 @@ export function MainPage() {
 
       <h2>Živý stream</h2>
       <p>Sledujte naši akci v přímém přenosu na Twitchi:</p>
-      <iframe src="https://player.twitch.tv/?channel=patrikturi&parent=https://edu-cup-react.vercel.app/" frameBorder="0"
-              allowFullScreen="true" scrolling="no" height="378" width="620"></iframe>
+      <iframe
+          src="https://player.twitch.tv/?channel=patrikturi&parent=https://edu-cup-react.vercel.app/"
+          frameBorder="0"
+          allowFullScreen={true}
+          height="378"
+          width="620"
+      ></iframe>
+
 
     </>
   )
