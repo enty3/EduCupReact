@@ -178,7 +178,7 @@ export function MainPage() {
       </section>
       <br></br>
       <h2>Živý stream</h2>
-      <p>Sledujte naši akci v přímém přenosu na Twitchi:</p>
+      <p>Sledujte naši akci v přímém přenosu na Twitchi: </p>
       <br></br>
 <MyTwitchStream></MyTwitchStream>
     </>
