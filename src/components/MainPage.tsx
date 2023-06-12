@@ -111,7 +111,7 @@ export function MainPage() {
         <p>
           Pokud chcete s týmem soutěžit v EduCup 2023, vyplňte prosím přihlášku:
         </p>
-        <form  action="https://formsubmit.co/c0c2401d00377313d34b4f00d67c8813"
+        <form  action="https://https://formsubmit.co/c0c2401d00377313d34b4f00d67c8813"
                method="post"
                onSubmit={validateEmail}>
           <div>
