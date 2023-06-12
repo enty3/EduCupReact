@@ -162,7 +162,7 @@ export function MainPage() {
                     value="Odeslat přihlášku"
                    />
             ) : (
-                <button onClick={signIn}>Přihlaš se pro odeslání!</button>
+                <button onClick={signIn}>Přihlaš se pro odesláníd!</button>
             )}
           </div>
 
