@@ -65,7 +65,7 @@ export function Navbar() {
                                     <div className="relative">
                                         <button
                                             onClick={handleDropdownToggle}
-                                            className="flex items-center space-x-2 text-white"
+                                            className="nav button font-bold text-white text-base bg-black rounded-md px-4 py-2 cursor-pointer"
                                         >
                                     <h3>{user.name}<img src={user.userPic} alt={"UserProfilePicture"} width={30} height={30}/></h3>
                                         </button>
