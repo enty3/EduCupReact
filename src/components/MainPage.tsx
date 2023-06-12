@@ -160,9 +160,10 @@ export function MainPage() {
                 <input
                     type="submit"
                     value="Odeslat přihlášku"
-                   />
+                    class="bg-white border border-black hover:bg-black hover:text-white dark:bg-neutral-000 text-black  nav button font-bold  text-base  rounded-md px-4 py-2 cursor-pointer"
+                />
             ) : (
-                <button onClick={signIn}>Přihlaš se pro odesláníd!</button>
+                <button class="bg-white border border-black hover:bg-black hover:text-white dark:bg-neutral-000 text-black  nav button font-bold  text-base  rounded-md px-4 py-2 cursor-pointer" onClick={signIn}>Přihlaš se pro odeslání!</button>
             )}
           </div>
 
