@@ -10,6 +10,7 @@ import {
 import { app } from '@/firebase'
 import { useAtom } from 'jotai'
 import { authAtom } from '@/atoms/authAtom'
+import MyTwitchStream from "@/components/TwitchEmbedVideo";
 
 export function MainPage() {
   const [user, setUser] = useAtom(authAtom)
@@ -175,18 +176,11 @@ export function MainPage() {
 
         </form>
       </section>
-
+      <br></br>
       <h2>Živý stream</h2>
       <p>Sledujte naši akci v přímém přenosu na Twitchi:</p>
-      <iframe
-          src="https://player.twitch.tv/?channel=patrikturi&parent=https://edu-cup-react.vercel.app/"
-          frameBorder="0"
-          allowFullScreen={true}
-          height="378"
-          width="620"
-      ></iframe>
-
-
+      <br></br>
+<MyTwitchStream>gg</MyTwitchStream>
     </>
   )
 }
