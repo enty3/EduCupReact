@@ -169,7 +169,7 @@ export function MainPage() {
                     className="bg-white border border-black hover:bg-black hover:text-white dark:bg-neutral-000 text-black nav btn font-bold text-base rounded-md px-4 py-2 cursor-pointer"
                 >
                   Přihlaš se pro odeslání!
-                </button>
+              </button>
 
             )}
           </div>
@@ -180,7 +180,7 @@ export function MainPage() {
       <h2>Živý stream</h2>
       <p>Sledujte naši akci v přímém přenosu na Twitchi: </p>
       <br></br>
-<MyTwitchStream></MyTwitchStream>
+<MyTwitchStream/>
     </>
   )
 }
