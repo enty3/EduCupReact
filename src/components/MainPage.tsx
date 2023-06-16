@@ -11,6 +11,7 @@ import { app } from '@/firebase'
 import { useAtom } from 'jotai'
 import { authAtom } from '@/atoms/authAtom'
 import MyTwitchStream from "@/components/TwitchEmbedVideo";
+import Komentare from "@/components/Coments";
 
 export function MainPage() {
   const [user, setUser] = useAtom(authAtom)
@@ -181,6 +182,7 @@ export function MainPage() {
       <p>Sledujte naši akci v přímém přenosu na Twitchi: </p>
       <br></br>
 <MyTwitchStream/>
+      <Komentare/>
     </>
   )
 }
